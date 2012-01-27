@@ -1,0 +1,308 @@
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align:baseline;
+}
+
+@font-face {
+    font-family: 'Myriad';
+    src: url('myriad-webfont.eot');
+    src: url('myriad-webfont.eot?#iefix') format('embedded-opentype'),
+         url('myriad-webfont.woff') format('woff'),
+         url('myriad-webfont.ttf') format('truetype'),
+         url('myriad-webfont.svg#MyriadCondensedWebRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Myriad';
+    src: url('myriad-bold-webfont.eot');
+    src: url('myriad-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('myriad-bold-webfont.woff') format('woff'),
+         url('myriad-bold-webfont.ttf') format('truetype'),
+         url('myriad-bold-webfont.svg#MyriadProBoldCondensed') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+body { 
+	padding:0;
+	margin:0;
+	color:#fff;
+	font-family: "Myriad";
+	background:#000 url(<%= asset_path 'background.jpg' %>) no-repeat center top;
+}
+
+input {
+	font-family: "Myriad";
+}
+
+a {
+	color:#fff;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+#geral {
+	position:relative;
+	width:780px;
+	height:100%;
+	margin:0 auto;
+}
+
+#logo {
+	float:left;
+	margin:120px 0 0 50px;
+	width:274px;
+	height:130px;
+}
+
+#form-background {
+	position:absolute;
+	top:0;
+	right:0;
+	width:400px;
+	height:340px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	-moz-border-radius-bottomleft:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	filter: alpha(opacity=70);
+	-khtml-opacity: 0.7;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	background-color:#000;
+	z-index:0;
+}
+
+#form {
+	float:right;
+	position:relative;
+	width:350px;
+	height:320px;
+	margin:20px 25px 10px 0;
+	z-index:1;
+}
+
+#form h1 {
+	font-size:50px;
+	color:#e5252d;
+	font-weight:bold;
+}
+
+#form p {
+	margin-top:15px;
+	font-size:18px;
+	text-align:justify;
+	color:#cbcbcb;
+}
+
+#form p strong {
+	color:#ffffff;
+}
+
+#form form {
+	margin-top:20px;
+}
+
+.email {
+	float:left;
+	position:relative;
+	width:190px;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FFFFFF), color-stop(1, #F0F0F0) );
+	background:-moz-linear-gradient( center top, #FFFFFF 5%, #F0F0F0 100% );
+	/*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F0F0F0');*/
+	background-color:#FFFFFF;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #666666;
+	display:inline-block;
+	color:#A0A0A0;
+	font-size:20px;
+	padding:10px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+
+.email:focus {
+	outline:none;
+}
+
+.submit {
+	position:relative;
+	display:inline-block;
+	width:135px;
+	height:45px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52) );
+	background:-moz-linear-gradient( center top, #b8e356 5%, #a5cc52 100% );
+/*	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52');*/
+	background-color:#b8e356;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #83c41a;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #86ae47;
+}
+
+.submit:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356) );
+	background:-moz-linear-gradient( center top, #a5cc52 5%, #b8e356 100% );
+/*	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356');*/
+	background-color:#a5cc52;
+}
+
+.submit:active {
+	position:relative;
+	top:1px;
+}
+
+#form .submit {
+	float:right;
+}
+
+#form-messages {
+	position:absolute;
+	left:0;
+	height:44px;
+	font-size:18px;
+	line-height:44px;
+	padding:0 25px 0 42px;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-bottom-left-radius:10px;
+	z-index:-1;
+	opacity:0.9;
+	overflow:hidden;
+	background:#000000 url(<%= asset_path 'signup-form-validation.png' %>) no-repeat 10px 0;
+}
+
+.message-orange {
+	border:1px solid #ffc000;
+	-webkit-box-shadow: 0px 0px 10px rgba(254, 206, 60, 0.9);
+	-moz-box-shadow: 0px 0px 10px rgba(254, 206, 60, 0.9);
+	box-shadow: 0px 0px 10px rgba(254, 206, 60, 0.9);
+}
+
+div.message-orange {
+	border:0;
+	color:#ffc000;
+}
+
+.message-green {
+	border:1px solid #658300;
+	-webkit-box-shadow: 0px 0px 10px rgba(101, 131, 0, 0.9);
+	-moz-box-shadow: 0px 0px 10px rgba(101, 131, 0, 0.9);
+	box-shadow: 0px 0px 10px rgba(101, 131, 0, 0.9);
+}
+
+div.message-green {
+	border:0;
+	color:#8db600;
+	background-position:10px -42px !important;
+}
+
+.message-red {
+	border:1px solid #47170c;
+	-webkit-box-shadow: 0px 0px 10px rgba(240, 0, 0, 0.9);
+	-moz-box-shadow: 0px 0px 10px rgba(240, 0, 0, 0.9);
+	box-shadow: 0px 0px 10px rgba(240, 0, 0, 0.9);
+}
+
+div.message-red {
+	border:0;
+	color:#f00000;
+	background-position:10px -84px !important;
+}
+
+#content {
+	clear:both;
+	text-align:center;
+	text-shadow: 0px 0px 8px #000000;
+}
+
+#content h2 {
+	position:relative;
+	font-size:42px;
+	font-weight:bold;
+	zoom:1;
+}
+
+#content h3 {
+	position:relative;
+	font-size:22px;
+	font-weight:normal;
+	zoom:1;
+}
+
+/*
+ * IE TEXT-SHADOW HACK
+ */
+#content h2 span, #content h3 span {
+	position:absolute;
+	width:100%;
+	left:-7px;
+	top:-7px;
+	z-index:-1;
+	color:#000000;
+/*
+	filter:	progid:DXImageTransform.Microsoft.Glow(Color=#000000,Strength=2)
+			progid:DXImageTransform.Microsoft.blur(pixelradius=5, enabled='true');*/
+
+	zoom:1;
+}
+
+#facebook-plugin {
+	position:relative;
+	width:780px;
+	height:160px;
+	overflow:hidden;
+	margin:15px auto;
+}
+
+#facebook-plugin .background {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+	width:100%;
+	height:100%;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	filter: alpha(opacity=70);
+	-khtml-opacity: 0.7;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	background-color:#000;	
+}
+
+#facebook-plugin iframe {
+	position:relative;
+	z-index:1;
+	margin:-1px 0 0 -1px;
+}
+
+#copyright {
+	text-align:center;
+	text-shadow: 0px 0px 8px #000000;
+}
