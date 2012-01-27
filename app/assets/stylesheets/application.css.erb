@@ -136,6 +136,8 @@ a:hover {
 
 .email:focus {
 	outline:none;
+	color:#666666;
+	text-shadow:none;
 }
 
 .submit {
@@ -232,6 +234,19 @@ div.message-red {
 	border:0;
 	color:#f00000;
 	background-position:10px -84px !important;
+}
+
+.message-blue {
+	border:1px solid #7ec6e4;
+	-webkit-box-shadow: 0px 0px 10px rgba(126,198, 228, 0.9);
+	-moz-box-shadow: 0px 0px 10px rgba(126,198, 228, 0.9);
+	box-shadow: 0px 0px 10px rgba(126,198, 228, 0.9);
+}
+
+div.message-blue {
+	border:0;
+	color:#7ec6e4;
+	background:#000000 url(<%= asset_path 'loading.gif' %>) no-repeat 10px center !important;
 }
 
 #content {
